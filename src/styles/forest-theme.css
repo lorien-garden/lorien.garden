@@ -1,0 +1,111 @@
+/* Forest Theme - following Starlight's contrast logic exactly */
+
+:root,
+::backdrop {
+	/* DARK FOREST (default dark mode) */
+	
+	/* Forest hues */
+	--sl-hue-accent: 130; /* Deep forest green */
+	--sl-hue-orange: 30; /* Warm amber/autumn */
+	--sl-hue-green: 130;
+	--sl-hue-blue: 180; /* Forest teal */
+	--sl-hue-purple: 280;
+	--sl-hue-red: 10;
+	
+	/* Gray scale: light bark to dark earth (light to dark for dark mode) */
+	--sl-color-white: hsl(30, 30%, 92%); /* Pale bark */
+	--sl-color-gray-1: hsl(30, 35%, 82%); /* Light wood */
+	--sl-color-gray-2: hsl(30, 30%, 68%); /* Weathered bark */
+	--sl-color-gray-3: hsl(30, 28%, 48%); /* Dark bark */
+	--sl-color-gray-4: hsl(30, 35%, 32%); /* Tree trunk */
+	--sl-color-gray-5: hsl(30, 40%, 22%); /* Dark earth */
+	--sl-color-gray-6: hsl(30, 45%, 15%); /* Deep soil */
+	--sl-color-black: hsl(30, 50%, 10%); /* Rich forest earth */
+	
+	/* Accent colors (forest green) - dark mode pattern */
+	--sl-color-accent-low: hsl(var(--sl-hue-accent), 45%, 20%);
+	--sl-color-accent: hsl(var(--sl-hue-accent), 50%, 55%);
+	--sl-color-accent-high: hsl(var(--sl-hue-accent), 50%, 75%);
+	
+	/* Additional colors - dark mode pattern */
+	--sl-color-orange-low: hsl(var(--sl-hue-orange), 45%, 20%);
+	--sl-color-orange: hsl(var(--sl-hue-orange), 80%, 60%);
+	--sl-color-orange-high: hsl(var(--sl-hue-orange), 80%, 85%);
+	--sl-color-green-low: hsl(var(--sl-hue-green), 45%, 20%);
+	--sl-color-green: hsl(var(--sl-hue-green), 50%, 55%);
+	--sl-color-green-high: hsl(var(--sl-hue-green), 50%, 75%);
+	--sl-color-blue-low: hsl(var(--sl-hue-blue), 45%, 20%);
+	--sl-color-blue: hsl(var(--sl-hue-blue), 40%, 55%);
+	--sl-color-blue-high: hsl(var(--sl-hue-blue), 40%, 80%);
+	--sl-color-purple-low: hsl(var(--sl-hue-purple), 45%, 20%);
+	--sl-color-purple: hsl(var(--sl-hue-purple), 50%, 60%);
+	--sl-color-purple-high: hsl(var(--sl-hue-purple), 50%, 85%);
+	--sl-color-red-low: hsl(var(--sl-hue-red), 45%, 20%);
+	--sl-color-red: hsl(var(--sl-hue-red), 70%, 60%);
+	--sl-color-red-high: hsl(var(--sl-hue-red), 70%, 85%);
+	
+	/* Semantic colors - following Starlight's mapping */
+	--sl-color-text: var(--sl-color-gray-2);
+	--sl-color-text-accent: var(--sl-color-accent-high);
+	--sl-color-text-invert: var(--sl-color-accent-low);
+	--sl-color-bg: var(--sl-color-black);
+	--sl-color-bg-nav: var(--sl-color-gray-6);
+	--sl-color-bg-sidebar: var(--sl-color-gray-6);
+	--sl-color-bg-inline-code: var(--sl-color-gray-5);
+	--sl-color-bg-accent: var(--sl-color-accent-high);
+	--sl-color-hairline-light: var(--sl-color-gray-5);
+	--sl-color-hairline: var(--sl-color-gray-6);
+	--sl-color-hairline-shade: var(--sl-color-black);
+	
+	--sl-color-backdrop-overlay: hsla(30, 50%, 10%, 0.66);
+}
+
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop {
+	/* DAY FOREST (light mode) - inverted pattern */
+	
+	/* Gray scale inverted: dark earth to sunlight (dark to light for light mode) */
+	--sl-color-white: hsl(30, 50%, 15%); /* Rich dark brown text */
+	--sl-color-gray-1: hsl(30, 45%, 18%); /* Deep soil */
+	--sl-color-gray-2: hsl(30, 40%, 24%); /* Dark earth */
+	--sl-color-gray-3: hsl(30, 35%, 35%); /* Tree trunk */
+	--sl-color-gray-4: hsl(30, 28%, 52%); /* Mid bark */
+	--sl-color-gray-5: hsl(30, 30%, 70%); /* Light bark */
+	--sl-color-gray-6: hsl(30, 35%, 88%); /* Pale wood */
+	--sl-color-gray-7: hsl(30, 40%, 94%); /* Sun-bleached wood */
+	--sl-color-black: hsl(35, 45%, 97%); /* Warm sunlit clearing */
+	
+	/* Accent colors (forest green) - light mode pattern (inverted high/low) */
+	--sl-color-accent-high: hsl(var(--sl-hue-accent), 55%, 25%);
+	--sl-color-accent: hsl(var(--sl-hue-accent), 50%, 45%);
+	--sl-color-accent-low: hsl(var(--sl-hue-accent), 50%, 88%);
+	
+	/* Additional colors - light mode pattern */
+	--sl-color-orange-high: hsl(var(--sl-hue-orange), 70%, 30%);
+	--sl-color-orange: hsl(var(--sl-hue-orange), 80%, 50%);
+	--sl-color-orange-low: hsl(var(--sl-hue-orange), 75%, 88%);
+	--sl-color-green-high: hsl(var(--sl-hue-green), 55%, 25%);
+	--sl-color-green: hsl(var(--sl-hue-green), 50%, 45%);
+	--sl-color-green-low: hsl(var(--sl-hue-green), 50%, 88%);
+	--sl-color-blue-high: hsl(var(--sl-hue-blue), 50%, 28%);
+	--sl-color-blue: hsl(var(--sl-hue-blue), 45%, 45%);
+	--sl-color-blue-low: hsl(var(--sl-hue-blue), 45%, 88%);
+	--sl-color-purple-high: hsl(var(--sl-hue-purple), 60%, 30%);
+	--sl-color-purple: hsl(var(--sl-hue-purple), 60%, 50%);
+	--sl-color-purple-low: hsl(var(--sl-hue-purple), 55%, 88%);
+	--sl-color-red-high: hsl(var(--sl-hue-red), 70%, 35%);
+	--sl-color-red: hsl(var(--sl-hue-red), 75%, 50%);
+	--sl-color-red-low: hsl(var(--sl-hue-red), 70%, 88%);
+	
+	/* Semantic colors - following Starlight's light mode mapping */
+	--sl-color-text-accent: var(--sl-color-accent);
+	--sl-color-text-invert: var(--sl-color-black);
+	--sl-color-bg-nav: var(--sl-color-gray-7);
+	--sl-color-bg-sidebar: var(--sl-color-bg);
+	--sl-color-bg-inline-code: var(--sl-color-gray-6);
+	--sl-color-bg-accent: var(--sl-color-accent);
+	--sl-color-hairline-light: var(--sl-color-gray-6);
+	--sl-color-hairline-shade: var(--sl-color-gray-6);
+	
+	--sl-color-backdrop-overlay: hsla(30, 35%, 35%, 0.66);
+}
